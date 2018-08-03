@@ -1,0 +1,36 @@
+<!--私教列表-->
+<view class='container'>
+  <view class='Tab'>
+    <view class='tab_item'>年级</view>
+    <view class='tab_item'>评价</view>
+    <view class='tab_item'>价格</view>
+  </view>
+  <view class='line-bg'></view>
+  <navigator class='item' wx:for='{{list}}' wx:key='index' url='/pages/mentorInfo/mentorInfo?uuid={{item.uuid}}' hover-class='none'>
+    <view class='headimg'>
+      <image src='{{item.userinfo.headimg}}'></image>
+    </view>
+    <view class='info'>
+      <view class='namebox'>
+        <view class='namesex'>
+          <text class='name'>{{item.userinfo.realname}}</text>
+          <i class='iconfont icon-male' wx:if='{{item.userinfo.gender == "1"}}'></i>
+          <i class='iconfont icon-female' wx:if='{{item.userinfo.gender == "2"}}'></i>
+          <text class='age'>{{item.userinfo.age}}</text>
+        </view>
+        <view class='timeprc'>{{item.price}}元/时</view>
+      </view>
+      <view class='int'>{{item.intro}}</view>
+      <view class='tag'>
+        <view class='ite' wx:for='{{item.tags}}' wx:key='items' wx:for-item='items'>{{items}}</view>
+      </view>
+      <view class='line'>
+        <view class='score'>评分
+          <i wx:for='{{item.stars}}' wx:key='favorfill' class='iconfont icon-favorfill'></i>
+          <i wx:for='{{5 - item.stars}}' wx:key='favor' class='iconfont icon-favor'></i>
+        </view>
+        <view class='time'>授课时长 {{item.totalhours}}小时</view>
+      </view>
+    </view>
+  </navigator>
+</view>

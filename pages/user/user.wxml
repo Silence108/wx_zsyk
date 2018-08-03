@@ -1,0 +1,79 @@
+<!--个人中心-->
+<view class='container' wx:if='{{isLogin}}'>
+  <view class='headbg'>
+    <navigator class='headimg' hover-class='none' url='/pages/userinfo/userinfo?uuid={{userInfo.userinfo.uuid}}'>
+      <image src='{{userInfo.userinfo.headimg}}' mode='aspectFill'></image>
+    </navigator>
+    <view class='username'>{{userInfo.userinfo.nickname}}</view>
+    <view class='qm'>{{signature}}<i class='iconfont icon-edit' bindtap='signatureClick'></i></view>
+  </view>
+  <view class='box1'>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='num'>{{userInfo.likenum}}</view>
+      <view class='txt'><i class='iconfont icon-likefill'> 关注</i></view>
+     </navigator>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='num'>{{userInfo.collectnum}}</view>
+      <view class='txt'><i class='iconfont icon-favor_fill_light'> 收藏</i></view>
+    </navigator>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='num'>{{userInfo.viewnum}}</view>
+      <view class='txt'><i class='iconfont icon-attentionfill'> 观看</i></view>
+    </navigator>
+  </view>
+  <view class='box2'>
+    <navigator class='item' hover-class='none' url='/pages/auth/auth'>
+      <view class='icon'><i class='iconfont icon-profile'></i></view>
+      <view class='txt'>个人认证</view>
+      <view class='status active' wx:if='{{userInfo.userinfo.identityType == "0" || userInfo.userinfo.identityType == "" || userInfo.userinfo.identityType == null || userInfo.userinfo.identityType == undefined}}'>未认证</view>
+      <view class='status' wx:if='{{userInfo.userinfo.identityType == "1"}}'>已认证</view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+    <navigator class='item' hover-class='none' url='/pages/myCourseList/myCourseList'>
+      <view class='icon'><i class='iconfont icon-form'></i></view>
+      <view class='txt'>我的课程</view>
+      <view class='status'>{{userInfo.mycoursenum}}</view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='icon'><i class='iconfont icon-time'></i></view>
+      <view class='txt'>我的预约</view>
+      <view class='status'>{{userInfo.mydatenum}}</view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='icon'><i class='iconfont icon-location'></i></view>
+      <view class='txt'>我的地址</view>
+      <view class='status'>未设置</view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+    <navigator class='item mg' hover-class='none' url=''>
+      <view class='icon'><i class='iconfont icon-write'></i></view>
+      <view class='txt'>绑定账号</view>
+      <view class='status'>182****1245</view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='icon'><i class='iconfont icon-share'></i></view>
+      <view class='txt'>推荐好友</view>
+      <view class='status'></view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+    <navigator class='item' hover-class='none' url=''>
+      <view class='icon'><i class='iconfont icon-settings'></i></view>
+      <view class='txt'>设置</view>
+      <view class='status'></view>
+      <view class='jt'><image src='/images/jiantou@2x.png'></image></view>
+    </navigator>
+  </view>
+  <view class='line-bg'></view>
+  <view class='mark' wx:if='{{isChange}}'>
+    <view class='inputbox'>
+      <view class='title'><text class='cancel' bindtap='cancel'>取消</text>编辑个性签名 <text class='confirm' bindtap='confirmS'>完成</text></view>
+      <view class='bg'><textarea placeholder='{{signature}}' fixed="true" maxlength='20' bindinput='signatureChange' value='{{signature}}'></textarea><text>最多20个字符</text></view>
+    </view>
+  </view>
+</view>
+<view class='noLogin' wx:if='{{!isLogin}}'>
+  <button open-type="getUserInfo" bindgetuserinfo='getUserInfo'>微信授权登录</button>
+</view>

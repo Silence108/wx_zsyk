@@ -1,0 +1,68 @@
+/* 选择学校 */
+.container {
+  padding: 24rpx;
+  height: 95.6vh;
+  border-bottom: none;
+}
+.container .search {
+  display: flex;
+  width: 702rpx;
+  border-bottom: #C4C3C3 solid 1rpx;
+  padding-bottom: 24rpx;
+}
+.container .search .input {
+  width: 562rpx;
+  background: #eee;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 10rpx;
+}
+.container .search .input input {
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 22rpx;
+  font-size: 30rpx;
+  width: 518rpx;
+}
+.container .search .searchbtn {
+  width: 134rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #eee;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+  border-radius: 10rpx;
+  margin-left: 6rpx;
+}
+.container .search .searchbtn.active {
+  background: #039FEC;
+  color: #fff;
+}
+.container .surnamelist {
+  height: 86vh;
+  overflow: auto;
+}
+.container .surnamelist .item {
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #666;
+  border-bottom: #dfdfdf solid 1rpx;
+  font-size: 30rpx;
+}
+.container .surnamelist .nosurname {
+  line-height: 88rpx;
+  height: 88rpx;
+  font-size: 30rpx;
+  color: #666;
+  display: none;
+}
+.container .surnamelist .nosurname.active {
+  display: block;
+}
+.container .surnamelist .nosurname image {
+  display: block;
+  width: 474rpx;
+  height: 542rpx;
+  margin: 80rpx auto
+}

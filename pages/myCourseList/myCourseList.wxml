@@ -1,0 +1,24 @@
+<!--我的课程-->
+<view class='container'>
+  <view class='line-bg'></view>
+        <navigator class='item' hover-class='none' wx:for='{{courseList}}' wx:key='index' url='/pages/courseShow/courseShow?uuid={{item.uuid}}'>
+          <image class='left' src='{{item.coverimg}}'>
+            <view class='type'>{{item.course}}</view>
+          </image>
+          <view class='right'>
+            <view class='title'>{{item.title}}</view>
+            <view class='line_1 line'>
+             <view class='name'>主讲：{{item.userinfo.realname}}</view>
+              <view class='number'><i class='iconfont icon-people'> {{item.applynum}}/{{item.usercnt}}人</i></view>
+            </view>
+            
+            <view class='line_2 line'>
+              <view class='time'>报名时间：{{item.applytime}} </view>
+            </view>
+            <view class='line_2 line'>
+              <view class='time'>授课时间：{{item.starttime}}到{{item.endtime}} </view>
+            </view>
+          </view>
+        </navigator>
+      
+</view>

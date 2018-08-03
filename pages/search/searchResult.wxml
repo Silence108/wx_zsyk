@@ -1,0 +1,4 @@
+<!--pages/search/searchResult.wxml-->
+<view class='container'>
+    <view>{{ searchValue}}</view>
+</view>

@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/feedback/feedback",
+    "pages/mentorList/mentorList",
+    "pages/mentorInfo/mentorInfo",
+    "pages/courseList/courseList",
+    "pages/courseShow/courseShow",
+    "pages/videoShow/videoShow",
+    "pages/user/user",
+    "pages/userinfo/userinfo",
+    "pages/userinfo/school",
+    "pages/logs/logs",
+    "pages/myCourseList/myCourseList",
+    "pages/search/search",
+    "pages/search/searchResult",
+    "pages/auth/auth"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#039FEC",
+    "navigationBarTitleText": "掌上悦客",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#039FEC",
+    "borderStyle": "white",
+    "backgroundColor": "#f1f1f1",
+    "list": [
+      {
+        "selectedIconPath": "images/icon-1-a.png",
+        "iconPath": "images/icon-1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon-2-a.png",
+        "iconPath": "images/icon-2.png",
+        "pagePath": "pages/mentorList/mentorList",
+        "text": "私教"
+      },
+      {
+        "selectedIconPath": "images/icon-3-a.png",
+        "iconPath": "images/icon-3.png",
+        "pagePath": "pages/courseList/courseList",
+        "text": "课程"
+      },
+      {
+        "selectedIconPath": "images/icon-5-a.png",
+        "iconPath": "images/icon-5.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+      
+    ]
+  }
+}

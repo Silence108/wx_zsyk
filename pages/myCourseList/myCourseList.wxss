@@ -1,0 +1,53 @@
+/* 我的课程 */
+.container {
+  padding-top: 0rpx;
+}
+.container .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24rpx 24rpx;
+  margin-bottom: 20rpx;
+}
+.container .item .left {
+  width: 240rpx;
+  height: 180rpx;
+  position: relative;
+}
+.container .item .left .type {
+  position: absolute;
+  background: #009688;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 0 12rpx;
+  top: 0;
+  left: 0;
+}
+.container .item .right {
+  width: 450rpx;
+  font-size: 24rpx;
+}
+.container .item .right .title {
+  font-size: 28rpx;
+}
+.container .item .right .line {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.container .item .right .line_1 {
+  color: #666;
+}
+.container .item .right .line_1 .iconfont {
+  font-size: 26rpx;
+}
+.container .item .right .line_1 .prc {
+  color: #E51C23;
+  font-size: 26rpx;
+}
+.container .item .right .line_2 {
+  color: #999;
+}
+.container .item .right .line_2 .name {
+  color: #62821F;
+}

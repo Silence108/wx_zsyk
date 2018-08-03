@@ -1,0 +1,90 @@
+<!--个人资料-->
+<view class='container'>
+  <view class='head'>
+    <image class='headimg' src='{{userinfo.userinfo.headimg}}' mode='aspectFill' data-url='{{userinfo.userinfo.headimg}}' bindtap='previewImg'></image>
+    <view class='ts' bindtap='chooseImg'>点击修改头像</view>
+  </view>
+  <view class='line-bg'></view>
+  <view class='item'>
+    <view class='name'>昵称</view>
+    <view class='value'>
+      <input type='text' placeholder='请输入您的昵称' value='{{userinfo.userinfo.nickname}}' data-name='nickname' bindblur='nickNameInput'></input>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='name'>性别</view>
+    <view class='value'>
+      <picker value="{{sexIndex}}" range="{{sex}}" bindchange="bindSexChange">
+        <view class="picker">
+          {{sex[sexIndex]}}
+        </view>
+      </picker>
+    </view>
+    <i class='iconfont icon-right'></i>
+  </view>
+  <view class='item'>
+    <view class='name'>出生日期</view>
+    <view class='value'>
+      <picker mode="date" value="{{date}}" start="1940-01-01" end="{{date}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+    <i class='iconfont icon-right'></i>
+  </view>
+  <view class='item'>
+    <view class='name'>手机号</view>
+    <view class='value'>
+      <input type='number' placeholder='请输入您的手机号' value='{{telephone}}' data-name='tel' bindblur='usernameInput'></input>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='name'>所在区域</view>
+    <view class='value'>
+      <picker mode="multiSelector" value="{{addressIndex}}" range="{{addressName}}" bindtap='' bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange">
+        <view class="picker">
+          {{addressName[0][addressIndex[0]]}}{{addressName[1][addressIndex[1]]}}{{addressName[2][addressIndex[2]]}}
+        </view>
+      </picker>
+    </view>
+    <i class='iconfont icon-right'></i>
+  </view>
+  <view class='item noborder'>
+    <view class='name'>详细地址</view>
+    <view class='value'>
+      <input type='text' placeholder='请输入您的详细地址' data-name='address' value='{{address}}' bindblur='addressInput'></input>
+    </view>
+  </view>
+  <view class='line-bg'></view>
+  <view class='item'>
+    <view class='name'>学校类型</view>
+    <view class='value'>
+      <picker value="{{schooltypeIndex}}" range="{{schooltype}}" bindchange="bindSchoolTypeChange">
+        <view class="picker">
+          {{schooltype[schooltypeIndex]}}
+        </view>
+      </picker>
+    </view>
+    <i class='iconfont icon-right'></i>
+  </view>
+  <view class='item'>
+    <view class='name'>所在学校</view>
+    <view class='value'>
+      <input type='text' placeholder='请选择所在学校' data-name='school' disabled='true' value='{{schoolname}}' bindtap='checkSchool'></input>
+    </view>
+    <i class='iconfont icon-right'></i>
+  </view>
+  <view class='item noborder'>
+    <view class='name'>年级设定</view>
+    <view class='value'>
+      <picker value="{{levelIndex}}" range="{{levelname}}" bindchange="bindClassChange" data-id='{{levelId}}'>
+        <view class="picker">
+          {{levelname[levelIndex]}}
+        </view>
+      </picker>
+    </view>
+    <i class='iconfont icon-right'></i>
+  </view>
+  <view class='btn {{isChange?"active":""}}' bindtap='subUserInfo'>完成</view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/login.wxml-->
+
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" open-type='getUserInfo'
+        disabled="{{disabled}}" bindtap="login">  登录 </button>
+

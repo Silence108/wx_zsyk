@@ -1,0 +1,46 @@
+/* 私教详情 */
+.headbg {
+  background: #039FEC;
+  color: #fff;
+  text-align: center;
+  font-size: 24rpx;
+  padding: 24rpx 0;
+}
+.headbg .headimg {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  border: #fff solid 8rpx;
+}
+.headbg .username {
+  font-size: 32rpx;
+}
+.headbg .username .icon-male {
+  color: #12b06b;
+}
+.headbg .username .age {
+  color: #ddd;
+}
+.headbg .line_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 栏目名称 */
+.index-title {
+  border-left: #aaa solid 8rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  margin: 24rpx;
+  padding-left: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.index-title .more {
+  font-size: 26rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
